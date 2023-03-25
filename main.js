@@ -5,6 +5,7 @@ const clear = document.querySelector('[data-clear]');
 const addButton = document.querySelector('.add')
 const equals = document.querySelector('[data-equals');
 const operators = document.querySelectorAll('[data-operation]');
+const dot = document.querySelector('dot');
 let operand = '';
 let arg1 = '';
 let arg2 = '';
@@ -13,8 +14,9 @@ let arg2 = '';
 
 function add(...nums) {
 let resultAdd = nums.reduce((num1, num2) => num1 + num2)
+// First, clear the output, then append result to output
     output.innerText = '';
-    output.innerText += parseFloat(resultAdd);
+    output.innerText += Number(resultAdd);
 }
 
 // console.log(add(4, 4));
@@ -91,12 +93,11 @@ operators.forEach((operator) => {
 
     function operate(operand, arg1, arg2) {
         // console.log(arg1, operand, arg2);
-    const value1 = parseInt(arg1);
-    const value2 = parseInt(arg2);
+    const value1 = Number(arg1);
+    const value2 = Number(arg2);
         if (operand === '+') {
           add(value1, value2);
-         
-          
+                   
         }
         if (operand === '-') {
             subtract(value1, value2);
@@ -116,6 +117,11 @@ clear.addEventListener('click', () => {
     output.innerText = '';
     })
 
+// function decimal() {
+//     if (output.textContent.includes('.')) {
+//         output.textContent += '.'
+//     }
+// }    
 
 
      
