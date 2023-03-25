@@ -1,0 +1,9 @@
+body {
+    display: flex;
+    background-color: pink;
+}
+
+h1 {
+    display: flex;
+    color: coral;
+}
