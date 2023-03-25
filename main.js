@@ -24,7 +24,7 @@ let resultAdd = nums.reduce((num1, num2) => num1 + num2)
 function subtract(...nums) {
 let resultSubtract = nums.reduce((num1, num2) => num1 - num2)
 output.innerText = '';
-output.innerText += parseFloat(resultSubtract);
+output.innerText += Number(resultSubtract);
 }
 
 // console.log(subtract(4, 4));
@@ -32,7 +32,7 @@ output.innerText += parseFloat(resultSubtract);
 function multiply(...nums) {
 let resultMultiply = nums.reduce((num1, num2) => num1 * num2)
 output.innerText = '';
-output.innerText += parseFloat(resultMultiply);
+output.innerText += Number(resultMultiply);
 }
 
 // console.log(multiply(4, 4));
@@ -40,7 +40,7 @@ output.innerText += parseFloat(resultMultiply);
 function divide(...nums) {
 let resultDivide = nums.reduce((num1, num2) => num1 / num2)
 output.innerText = '';
-output.innerText += parseFloat(resultDivide);
+output.innerText += Number(resultDivide);
 }
 
 // console.log(divide(4, 4));
@@ -93,8 +93,8 @@ operators.forEach((operator) => {
 
     function operate(operand, arg1, arg2) {
         // console.log(arg1, operand, arg2);
-    const value1 = Number(arg1);
-    const value2 = Number(arg2);
+    const value1 = parseFloat(arg1);
+    const value2 = parseFloat(arg2);
         if (operand === '+') {
           add(value1, value2);
                    

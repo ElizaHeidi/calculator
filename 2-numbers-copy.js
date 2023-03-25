@@ -5,59 +5,47 @@ const clear = document.querySelector('[data-clear]');
 const addButton = document.querySelector('.add')
 const equals = document.querySelector('[data-equals');
 const operators = document.querySelectorAll('[data-operation]');
+const dot = document.querySelector('dot');
 let operand = '';
 let arg1 = '';
 let arg2 = '';
 
 // Math operations
 
-// function add(...nums) {
-// let resultAdd = nums.reduce((num1, num2) => num1 + num2)
-//     return parseFloat(resultAdd);
-// }
+function add(...nums) {
+let resultAdd = nums.reduce((num1, num2) => num1 + num2)
+// First, clear the output, then append result to output
+    output.innerText = '';
+    output.innerText += Number(resultAdd);
+}
 
 // console.log(add(4, 4));
 
-// function subtract(...nums) {
-// let resultSubtract = nums.reduce((num1, num2) => num1 - num2)
-//     return parseFloat(resultSubtract);
-// }
+function subtract(...nums) {
+let resultSubtract = nums.reduce((num1, num2) => num1 - num2)
+output.innerText = '';
+output.innerText += Number(resultSubtract);
+}
 
 // console.log(subtract(4, 4));
 
-// function multiply(...nums) {
-// let resultMultiply = nums.reduce((num1, num2) => num1 * num2)
-//     return parseFloat(resultMultiply);
-// }
+function multiply(...nums) {
+let resultMultiply = nums.reduce((num1, num2) => num1 * num2)
+output.innerText = '';
+output.innerText += Number(resultMultiply);
+}
 
 // console.log(multiply(4, 4));
 
-// function divide(...nums) {
-// let resultDivide = nums.reduce((num1, num2) => num1 / num2)
-//     return parseFloat(resultDivide);
-// }
+function divide(...nums) {
+let resultDivide = nums.reduce((num1, num2) => num1 / num2)
+output.innerText = '';
+output.innerText += Number(resultDivide);
+}
 
 // console.log(divide(4, 4));
 
-// function operate(operand, num1, num2){
-//     operand = operators.textContent;
-//     equals.addEventListener('click', () => {
-//         switch(operate){
-//             case '+':
-//                 return add(num1, num2);
-//                 break;
-//             case '-':
-//                 return subtract(num1, num2);
-//                 break;
-//             case '*':
-//                 return multiply(num1, num2);
-//                 break;
-//             case '/':
-//                 return divide(num1, num2);
-//                 break;
-//         }
-// })
-// }
+
 // append numbers to input on click
 
 buttonNums.forEach((buttonNum) => {
@@ -100,23 +88,25 @@ operators.forEach((operator) => {
         });
     });
 
-// operate(+, 4, 4+) Then, if operand = '+', add value1 and value2
+// operate(+, 4, 4=) Then, ParseInt the '4,' and '4=' 
+// if operand = '+', add() parseInt(4) and parseInt(4=)
 
     function operate(operand, arg1, arg2) {
         // console.log(arg1, operand, arg2);
-    const value1 = parseInt(arg1);
-    const value2 = parseInt(arg2);
+    const value1 = parseFloat(arg1);
+    const value2 = parseFloat(arg2);
         if (operand === '+') {
-          output.innerText = value1 + value2;
+          add(value1, value2);
+                   
         }
         if (operand === '-') {
-            output.innerText = value1 - value2;
+            subtract(value1, value2);
         }
         if (operand === '*') {
-            output.innerText = value1 * value2;
+            multiply(value1, value2);
         }
         if (operand === '/') {
-            output.innerText = value1 / value2;
+            divide(value1, value2);
         }
        
     }
@@ -127,6 +117,11 @@ clear.addEventListener('click', () => {
     output.innerText = '';
     })
 
+// function decimal() {
+//     if (output.textContent.includes('.')) {
+//         output.textContent += '.'
+//     }
+// }    
 
 
      
