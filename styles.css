@@ -1,9 +1,114 @@
 body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: pink;
 }
 
+.container-1 {
+    /* display: flex;
+    justify-content: center; */
+    /* border: 2px solid darkgreen; */
+    
+}
+
 h1 {
-    display: flex;
     color: coral;
+    font-family: Helvetica, sans-serif   
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 25px);
+    grid-column-gap: 4px;
+    grid-row-gap: 6px;
+    height: 150px;
+    width: 400px;
+    border: 2px solid darkgreen;
+    background-color: darkgreen;
+    margin: 60px;
+    margin-top: -0px;
+}
+
+.output {
+    text-align: right;
+    grid-area: 2 / 1 / 1 / 5;
+    height: 1fr;
+    width: 1fr;
+    background-color: white;
+}
+
+[data-clear] {
+   width: 1fr;
+   height: 1fr;
+   padding: 6px;
+   background-color: goldenrod;
+   color: white;
+   font-size: 12px;
+   font-weight: bold;
+   border: none;
+   border-radius: 5px; */
+}
+
+[data-equals] {
+    width: 1fr;
+    height: 1fr;
+    padding: 6px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; */
+ }
+
+ [data-operation] {
+    width: 1fr;
+    height: 1fr;
+    padding: 6px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; */
+ }
+
+ [data-number] {
+    width: 1fr;
+    height: 1fr;
+    padding: 6px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; */
+ }
+
+.button-clear {
+    grid-column-start: 5; /* start at column line 1 */
+    grid-column-end: 5; /* end at column line 4 */
+    grid-row-start: 1; /*start at row line 2 */
+    grid-row-end: 1; /* end at row line 4 */
+}
+
+.button-equals {
+    grid-column-start: 4; /* start at column line 1 */
+    grid-column-end: 5; /* end at column line 4 */
+    grid-row-start: 2; /*start at row line 2 */
+    grid-row-end: 2; /* end at row line 4 */
+}
+
+.divide {
+grid-column-start: 4; /* start at column line 1 */
+grid-column-end: 4; /* end at column line 4 */
+grid-row-start: 2; /*start at row line 2 */
+grid-row-end: 3;
 }
