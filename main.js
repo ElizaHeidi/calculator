@@ -117,11 +117,11 @@ clear.addEventListener('click', () => {
     output.innerText = '';
     })
 
-// function decimal() {
-//     if (output.textContent.includes('.')) {
-//         output.textContent += '.'
-//     }
-// }    
+function decimal() {
+    if (output.textContent.includes('.')) {
+        output.textContent += '.'
+    }
+}    
 
 
      
