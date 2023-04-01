@@ -78,7 +78,9 @@ result = previousValue - currentValue;
 } else if (previousOperator === '*') {
 result = previousValue * currentValue;
 } else if (previousOperator === '/') {
-result = previousValue / currentValue;
+    if (currentValue === 0) {
+        alert(`You can't divide by zero!`);
+} result = previousValue / currentValue;
 }
 
 previousValue = result.toString();
@@ -92,6 +94,7 @@ clear.addEventListener('click', () => {
 previousValue = '';
 currentValue = '';
 operator = '';
+previousOperator = '';
 previousOutput.textContent = currentValue;
 currentOutput.textContent = currentValue;
 })
