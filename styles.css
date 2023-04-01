@@ -38,6 +38,8 @@ h1 {
 
 .output {
     text-align: right;
+    display: flex;
+    justify-content: end;
     grid-area: 2 / 1 / 1 / 5;
     height: 1fr;
     width: 1fr;
