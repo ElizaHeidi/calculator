@@ -2,36 +2,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: pink;
-}
-
-.container-1 {
-    /* display: flex;
-    justify-content: center; */
-    /* border: 2px solid darkgreen; */
-    
+    background-color: whitesmoke;
 }
 
 h1 {
     color: coral;
-    font-family: Helvetica, sans-serif   
+    font-family:    
 }
 
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .calculator {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 25px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 4px;
     grid-row-gap: 6px;
-    height: 150px;
-    width: 400px;
-    border: 2px solid darkgreen;
-    background-color: darkgreen;
+    height: 265px;
+    width: 200px;
+    border: 2px solid darkgray;
+    background-color: lightgrey;
+    
     margin: 60px;
     margin-top: -0px;
 }
@@ -40,7 +35,7 @@ h1 {
     text-align: right;
     display: flex;
     justify-content: end;
-    grid-area: 2 / 1 / 1 / 5;
+    grid-area: 2 / 1 / 1 /4;
     height: 1fr;
     width: 1fr;
     background-color: white;
@@ -49,68 +44,81 @@ h1 {
 [data-clear] {
    width: 1fr;
    height: 1fr;
+   grid-column-start: 4; /* start at column line 1 */
+    grid-column-end: 4; /* end at column line 4 */
+    grid-row-start: 1; /*start at row line 2 */
+    grid-row-end: 1; /* end at row line 4 */
    padding: 6px;
-   background-color: goldenrod;
+   background-color: lightcoral;
    color: white;
    font-size: 12px;
    font-weight: bold;
-   border: none;
-   border-radius: 5px; */
+   border: 2px solid white;
+   border-radius: 10px; */
 }
 
 [data-equals] {
     width: 1fr;
     height: 1fr;
+    grid-column-start: 4; /* start at column line 1 */
+    grid-column-end: 4; /* end at column line 4 */
+    grid-row-start: 3; /*start at row line 2 */
+    grid-row-end: 6; /* end at row line 4 */
     padding: 6px;
-    background-color: goldenrod;
+    background-color: lightsalmon;
     color: white;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: bold;
-    border: none;
-    border-radius: 5px; */
+    border: 2px solid white;
+    border-radius: 10px; */
  }
 
  [data-operation] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 1fr;
     height: 1fr;
     padding: 6px;
-    background-color: goldenrod;
+    background-color: lightsalmon;
     color: white;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: bold;
-    border: none;
-    border-radius: 5px; */
+    border: 2px solid white;
+    border-radius: 10px; */
  }
 
  [data-number] {
+    width: 45px;
+    height: 1fr;
+    padding: 6px;
+    background-color: lightpink;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 10px; */
+ }
+
+.divide {
+grid-column-start: 1; /* start at column line 1 */
+grid-column-end: 1; /* end at column line 4 */
+grid-row-start: 2; /*start at row line 2 */
+grid-row-end: 2;
+}
+
+.neg {
+    grid-column-start: 4; /* start at column line 1 */
+    grid-column-end: 4; /* end at column line 4 */
+    grid-row-start: 6; /*start at row line 2 */
+    grid-row-end: 6; 
     width: 1fr;
     height: 1fr;
     padding: 6px;
-    background-color: goldenrod;
+    background-color: lightsalmon;
     color: white;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: bold;
-    border: none;
-    border-radius: 5px; */
- }
-
-.button-clear {
-    grid-column-start: 5; /* start at column line 1 */
-    grid-column-end: 5; /* end at column line 4 */
-    grid-row-start: 1; /*start at row line 2 */
-    grid-row-end: 1; /* end at row line 4 */
-}
-
-.button-equals {
-    grid-column-start: 4; /* start at column line 1 */
-    grid-column-end: 5; /* end at column line 4 */
-    grid-row-start: 2; /*start at row line 2 */
-    grid-row-end: 2; /* end at row line 4 */
-}
-
-.divide {
-grid-column-start: 4; /* start at column line 1 */
-grid-column-end: 4; /* end at column line 4 */
-grid-row-start: 2; /*start at row line 2 */
-grid-row-end: 3;
-}
+    border: 2px solid white;
+    border-radius: 10px; */
+} 

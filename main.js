@@ -6,6 +6,7 @@ const addButton = document.querySelector('.add')
 let equals = document.querySelector('[data-equals]');
 const operators = document.querySelectorAll('[data-operation]');
 const dot = document.querySelector('.dot');
+const neg = document.querySelector('.neg');
 let previousOutput = document.querySelector('.previousNumber');
 let currentOutput = document.querySelector('.currentNumber');
 let operator = '';
@@ -35,6 +36,18 @@ currentValue += '.';
 }
 }
 
+neg.addEventListener('click', function() {
+    if (currentValue === '') {
+        return;
+    } else handleNeg(); 
+    
+})
+
+function handleNeg() {
+    currentValue = Number(currentValue) * -1;
+    currentValue = currentValue.toString();
+    currentOutput.innerText = currentValue;
+}
 
 operators.forEach((op) => {
 op.addEventListener('click', (e) => {
@@ -55,8 +68,9 @@ previousOperator = operator
 previousValue = calculate();
 }
 
-currentValue = '';
+    currentValue = '';
 }
+
 
 
 equals.addEventListener('click', (e) => {
@@ -78,7 +92,7 @@ result = previousValue - currentValue;
 } else if (previousOperator === '*') {
 result = previousValue * currentValue;
 } else if (previousOperator === '/') {
-    if (currentValue === 0) {
+    if (operator === '/' && currentValue === 0) {
         alert(`You can't divide by zero!`);
 } result = previousValue / currentValue;
 }
