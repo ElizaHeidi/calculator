@@ -2,12 +2,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: whitesmoke;
+    align-items: center;
+    background-color: rgb(233, 237, 192);
+    margin-top: 50px;
 }
 
 h1 {
-    color: coral;
-    font-family:    
+    color: #AB5753;
+    font-family: 'yellowtail';    
+    font-size: 72px
 }
 
 .container {
@@ -22,23 +25,28 @@ h1 {
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 4px;
     grid-row-gap: 6px;
-    height: 265px;
-    width: 200px;
-    border: 2px solid darkgray;
-    background-color: lightgrey;
+    height: 350px;
+    width: 255px;
+    padding: 6px;
+    border: 2px solid #AB5753;
+    background-color: #FBBBB7;
     
     margin: 60px;
-    margin-top: -0px;
+    margin-top: 12px;
 }
 
 .output {
-    text-align: right;
     display: flex;
     justify-content: end;
+    align-items: end;
     grid-area: 2 / 1 / 1 /4;
     height: 1fr;
     width: 1fr;
-    background-color: white;
+    background-color: rgb(233, 237, 192);
+    padding-right: 6px;
+    font-family: 'yellowtail';
+    font-size: 28px;
+    color: #763c39; 
 }
 
 [data-clear] {
@@ -57,6 +65,10 @@ h1 {
    border-radius: 10px; */
 }
 
+[data-clear]:hover {
+    background-color: #AB5753;
+}
+
 [data-equals] {
     width: 1fr;
     height: 1fr;
@@ -65,12 +77,18 @@ h1 {
     grid-row-start: 3; /*start at row line 2 */
     grid-row-end: 6; /* end at row line 4 */
     padding: 6px;
-    background-color: lightsalmon;
+    margin-right:px;
+    background-color: #C7B057;
     color: white;
+    font-family: 'yellowtail';
     font-size: 22px;
     font-weight: bold;
     border: 2px solid white;
     border-radius: 10px; */
+ }
+
+ [data-equals]:hover {
+    background-color: #8D7424;
  }
 
  [data-operation] {
@@ -80,26 +98,36 @@ h1 {
     width: 1fr;
     height: 1fr;
     padding: 6px;
-    background-color: lightsalmon;
+    background-color: #C7B057;
     color: white;
+    font-family: 'yellowtail';
     font-size: 22px;
     font-weight: bold;
     border: 2px solid white;
     border-radius: 10px; */
+ }
+
+ [data-operation]:hover {
+ background-color: #8D7424;
  }
 
  [data-number] {
-    width: 45px;
+    width: 55px;
     height: 1fr;
     padding: 6px;
-    background-color: lightpink;
+    background-color: #DD928E;
     color: white;
+    font-family: 'yellowtail';
     font-size: 22px;
     font-weight: bold;
     border: 2px solid white;
     border-radius: 10px; */
  }
 
+ [data-number]:hover {
+    background-color: #AB5753; 
+}
+ 
 .divide {
 grid-column-start: 1; /* start at column line 1 */
 grid-column-end: 1; /* end at column line 4 */
@@ -115,10 +143,15 @@ grid-row-end: 2;
     width: 1fr;
     height: 1fr;
     padding: 6px;
-    background-color: lightsalmon;
+    background-color: #C7B057;
     color: white;
+    font-family: 'yellowtail';
     font-size: 22px;
     font-weight: bold;
     border: 2px solid white;
     border-radius: 10px; */
 } 
+
+.neg:hover {
+    background-color: #8D7424;
+}
